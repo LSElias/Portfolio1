@@ -3,12 +3,11 @@ import { Routes, Route } from "react-router-dom";
 import MainLayout from "./_main/MainLayout";
 import InfoLayout from "./_InfoLayout/InfoLayout";
 import AboutMe from "./_InfoLayout/pages/AboutMe"
-import Formation from "./_InfoLayout/pages/formation";
 import Projects from "./_InfoLayout/pages/Projects";
 import Contact from "./_InfoLayout/pages/contact";
 import GreenWallet from "./_InfoLayout/pages/Projects-Pages/GreenWallet"
 import Hardtech from "./_InfoLayout/pages/Projects-Pages/Hardtech"
-
+import Formation from './_InfoLayout/pages/Formation'
 
 function App() {
   return (

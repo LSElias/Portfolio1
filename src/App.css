@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Koulen", sans-serif;
+}
+
+h1, h2{
+  user-select: none;
+}
+
+.InsidePage {
+  min-height: 100vh;
+  height: fit-content;
+  padding: 2vh;
+  align-items: center;
+  background-color: #e9ddc1;
+}
+
+.InsideBox {
+  align-items: center;
+  height: 85vh;
+  display: flex;
+  padding: 1em 0em 0em 3em;
+}
+
+.InsidePage h1 {
+  width: 100%;
+  font-size: 5.5em;
+  letter-spacing: 0.5;
+}
+
+.InsidePage .Title {
+  width: 40%;
+  border-right: 6px solid rgba(26, 24, 23, 0.87);
+}
+
+.InsidePage span {
+  letter-spacing: -0.01em;
+}
+
+.InsidePage h2 {
+  font-size: 2.5em;
+  padding-left: 0.5em;
+  color: #d3c8af;
+  background-color:  rgba(26, 24, 23, 0.87);;
+}
+
+.but-holder{
+  width: 85%;
+  text-align: center;
+}
+
+.but-holder button{
+  width: 35%;
+  margin: 0px 15px;
+}
+
+/***** Main Page Menu *****/
+
+.MenuMP {
+  padding: 1em;
+  display: inline-block;
+  position: relative;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  min-width: 270px;
+}
+
+.link:hover {
+  transition: 0.3s ease-in-out;
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+  color: rgba(26, 24, 23, 0.87);
+  text-decoration: none;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.MenuMP .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: rgba(
+    26,
+    24,
+    23,
+    0.87
+  );
+  transition: width 0.3s ease-in-out;
+}
+
+.MenuMP .link:hover::after {
+  width: 100%;
+}
+
+.icons{
+  position: absolute;
+  right: 1em;
+  font-size: 1em;
+
+}
+
+/** End of  Main Page Menu **/
+
+/** Media For Main Page **/
+@media (max-width: 1024px){
+  body{
+    width: 100%;
+  }
+
+  .InsidePage {
+    padding: 0vh;
+    width: 100%;
+    align-items: center;
+    min-height: 100vh;
+    height: fit-content;
+  }
+
+  .InsideBox {
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    padding: 1em 0em 0em 3em;
+  }
+
+
+  .InsidePage h1 {
+    width: calc(100% - 0.5em);
+    font-size: 3em;
+    letter-spacing: -0.02em;
+    padding: 1em 1em 0em 0em;
+  }
+
+  .InsidePage h2 {
+    width: calc(100% - 0.5em);
+    user-select: none;
+    font-size: 2em;
+    font-family: "Koulen", sans-serif;
+  }
+
+  .InsidePage .Title {
+    width: 40%;
+    text-align: center;
+  }
+
+  .but-holder{
+    width:  calc(100% - 0.5em);
+    text-align: center;
+  }
+  
+  .but-holder button{
+    width: 40%;
+    margin: 0px 1em;
+  }
+
+}
+
+
+@media (max-width: 900px) {
+
+
+  .InsidePage h1 {
+    width: 100%;
+    font-size: 4.6em;
+    letter-spacing: -0.02em;
+    padding: 0em 0em 0em 0em;
+  }
+
+  .InsidePage .Title {
+    width: 100%;
+    border-right: none;
+    text-align: center;
+  }
+
+  .InsideBox {
+    align-items: center;
+    height: 100vh;
+    display: block;
+    padding: 0em 0em 0em 0em;
+  }
+
+  .but-holder{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .but-holder button{
+    width: 40%;
+    margin: 0px 1em;
+  }
+
+}
+
+@media (max-width: 900px) {
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+  .InsidePage h1 {
+    width: 100%;
+    font-size: 2.5em;
+    letter-spacing: -0.02em;
+    border-right: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .InsidePage .Title {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .InsideBox {
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    display: block;
+    padding: 0vh;
+    margin: 0px;
+  }
+
+  .InsidePage h2 {
+    width: 100%;
+    user-select: none;
+    font-size: 2em;
+    font-family: "Koulen", sans-serif;
+    padding: 0vh;
+    margin: 0px;
+  }
+
+  .icons{
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 300px){
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+  .InsidePage h1 {
+    width: 100%;
+    font-size: 2em;
+    letter-spacing: -0.02em;
+    border-right: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .InsidePage .Title {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .InsideBox {
+    width: 100%;
+    align-items: center;
+    display: block;
+    padding: 0vh;
+    margin: 0px;
+  }
+
+  .InsidePage h2 {
+    width: 100%;
+    user-select: none;
+    font-size: 1.5em;
+    font-family: "Koulen", sans-serif;
+    padding: 0vh;
+    margin: 0px;
+  }
+
+  .icons{
+    font-size: 1em;
+    display: none;
+  }
+  .but-holder{
+    width: 100%;
+    text-align: center;
+  }
+  
+  .but-holder button{
+    width: 60%;
+    margin: 0.3em 0.5em;
+  }
+
+  .InsidePage{
+    min-height: 100vh;
+    height: fit-content;
+  }
+
+}
+
+/** End of Media for Main Pag **/
+
+/* Go back*/
+.gobackbutton{
+  height: 3.25em;
+  width: 5em;
+  background-color: transparent;
+  color: rgba(26, 24, 23, 0.87);
+  transition: ease-in-out 0.2s;
+  border-radius: 45px;
+}
+
+.gobackbutton:hover{
+  background-color: rgba(26, 24, 23, 0.87);
+  color: rgb(216, 189, 135);
+}
+
+.header{
+  display: flex;
+  margin: 0.5em;
+  background-color: transparent;
+}
+
+.spacing{
+  flex: 1 1 auto;
+}
+
+.item{
+  color: rgb(26, 24, 23);
+  text-decoration: none;
+  font-size: x-large;
+  border-radius: 45px;
+  transition: 0.3s ease-in-out;
+}
+
+.item:Hover{
+  background-color: rgba(26, 24, 23, 0.87);
+  color: #d3c8af;
+  padding: 0.5em 0.5em;
+}
+
+/* About me page */
+
+.paragraph{
+  text-align: justify; 
+  font-family: 'Oswald', sans-serif;
+}
+
+.knowledge{
+  background-color:  rgba(26, 24, 23, 0.87);
+  color: #d3c8af;
+  padding: 1.5em;
+  border-radius: 25px;
+}
+
+.knowledge ul li{
+  font-family: 'Oswald', sans-serif;
+}
+
+.knowledge ul{
+  list-style: none;
+  padding: 0;
+}
+
+.knowledge li::before { content: "✧"; margin-right: 0.5em; }
+
+.degree{
+  background-color: #3f3b32;
+  border-left: 10px solid #3f3b32;
+  padding: 1em;
+  margin: 1.5em 0em;
+  border-radius: 8px 25px 8px 25px;
+  box-shadow: #3f3b32 0px 1px 3px;
+  color:  rgba(228, 220, 202, 0.911)
+}
+
+.certificates{
+  background-color: #3f3b32;
+  margin: 1.5em 0em;
+  padding: 1em;
+  border-radius: 25px 3px 25px 3px;
+  box-shadow: #3f3b32 0px 1px 3px;
+  color:  rgba(228, 220, 202, 0.911)
+}
+
+.certificates h4,h5,h6{
+  font-family: 'Oswald', sans-serif;  
+}
+
+.contact{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-card{
+  background-color:  rgba(26, 24, 23, 0.87);
+  color: #d3c8af;
+  padding: 2em;
+  border-radius: 35px;
+  margin: 1em 0em;
+  text-align: center;
+}
+
+.contact-card button{
+  margin-top: 1em;
+  background-color:  #d3c8af;
+  color:  rgba(26, 24, 23, 0.87);
+  transition: ease-in-out .3s;
+  font-size: larger;
+}
+
+.contact-card button:hover{
+  background-color:  #ac9475;
+}
+
+.email{
+  font-family: 'Oswald', sans-serif;
+}
+
+.menuBtn{
+  background-color: transparent;
+  color:  rgba(26, 24, 23, 0.87);
+  border-radius: 50px;
+  transition: ease-in-out 0.3s;
+
+}
+
+.menuBtn:hover{
+  background-color:  rgba(26, 24, 23, 0.87);
+  color:  #ffd8a4;
+}
+
+.projects{
+  background-color:rgb(17, 14, 13);
+}
+
+.sidebarside{
+  background-color:rgb(39, 36, 34);
+}
+
+.sideBar{
+  background-color:rgb(39, 36, 34);
+  font-size: 2.5em;
+  padding: 0.7em 0.5em;
+  min-height: 90.2vh;
+}
+
+
+.sideBar ul{
+  list-style: none;
+  padding: 0px;
+}
+
+.sidelink {
+ transition: 0.35s ease-in-out;
+ margin: 0.25em 0px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color:  #d3c8af;
+
+}
+
+.sidelink:hover{
+  letter-spacing: 2.5px;
+  color:  #d3c8af;
+}
+
+.propage{
+  padding: 2em 1em;
+  background-color:rgb(17, 14, 13);
+  min-height: 90.2dvh;
+  color: #d3c8af;
+}
+
+#carouselId > #gw-carousel > li{
+  background-color: black;
+  border-radius: 50%;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+#carouselId > #ht-carousel > li{
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.infobox{
+  padding: 1em;
+}
+
+.infobox .ProjectName{
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid #d3c8af;
+}
+
+.tableInfo {
+  border: 0px solid transparent;
+  color: #e9ddc1;
+  
+}
+
+.tableInfo h4{
+  color: #ffffffee;
+  font-family: 'Oswald', sans-serif;
+
+}
+
+.description{
+  text-align: justify;
+  color: #ffffffee;
+}
+.description h4{
+  font-family: 'Oswald', sans-serif;
+
+}

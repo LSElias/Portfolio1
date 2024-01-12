@@ -244,6 +244,7 @@ ul {
   }
 
   .icons{
+    display: none;
     font-size: 1em;
   }
 }
@@ -306,6 +307,8 @@ ul {
     min-height: 100vh;
     height: fit-content;
   }
+
+
 
 }
 
@@ -444,6 +447,7 @@ ul {
 
 .projects{
   background-color:rgb(17, 14, 13);
+  min-height: 90.2vh;
 }
 
 .sidebarside{
@@ -454,7 +458,6 @@ ul {
   background-color:rgb(39, 36, 34);
   font-size: 2.5em;
   padding: 0.7em 0.5em;
-  min-height: 90.2vh;
 }
 
 

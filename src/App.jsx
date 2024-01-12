@@ -4,7 +4,7 @@ import MainLayout from "./_main/MainLayout";
 import InfoLayout from "./_InfoLayout/InfoLayout";
 import AboutMe from "./_InfoLayout/pages/AboutMe"
 import Projects from "./_InfoLayout/pages/Projects";
-import Contact from "./_InfoLayout/pages/contact";
+import Contact from "./_InfoLayout/pages/Contact";
 import GreenWallet from "./_InfoLayout/pages/Projects-Pages/GreenWallet"
 import Hardtech from "./_InfoLayout/pages/Projects-Pages/Hardtech"
 import Formation from './_InfoLayout/pages/Formation'

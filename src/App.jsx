@@ -6,7 +6,7 @@ import AboutMe from "./_InfoLayout/pages/AboutMe"
 import Projects from "./_InfoLayout/pages/Projects";
 import Contact from "./_InfoLayout/pages/Contact";
 import GreenWallet from "./_InfoLayout/pages/Projects-Pages/GreenWallet"
-import Hardtech from "./_InfoLayout/pages/Projects-Pages/Hardtech"
+import Hardtech from "./_InfoLayout/pages/Projects-Pages/HardTech"
 import Formation from './_InfoLayout/pages/Formation'
 
 function App() {

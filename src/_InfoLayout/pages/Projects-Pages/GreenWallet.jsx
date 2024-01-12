@@ -63,7 +63,7 @@ const GreenWallet = () => {
             </h4>
             <h4>
               This university project was made during 2023, from the end of september to
-              the beggining december. It has multiple features, such as login
+              the beggining of december. It has multiple features, such as login
               authentication, user registration, facturation of the recycling
               exchange and reward coupons, and many others.
             </h4>

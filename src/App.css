@@ -332,7 +332,6 @@ ul {
 .header{
   display: flex;
   margin: 0.5em;
-  background-color: transparent;
 }
 
 .spacing{

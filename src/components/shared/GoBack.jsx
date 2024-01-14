@@ -8,7 +8,7 @@ const GoBack = () => {
   const history = useNavigate();
 
   const handleMoveBack = () => {
-    history(-1);
+    history("/");
   };
   
     return (

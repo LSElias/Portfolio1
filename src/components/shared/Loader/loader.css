@@ -1,0 +1,13 @@
+.loaderbg{
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(26, 24, 23);
+}
+
+.loaderbg img{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    max-width: 100%;
+}

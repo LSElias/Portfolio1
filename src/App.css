@@ -360,7 +360,7 @@ ul {
 }
 
 .knowledge{
-  background-color:  rgba(26, 24, 23, 0.87);
+  background-color:  rgb(26, 24, 23);
   color: #d3c8af;
   padding: 1.5em;
   border-radius: 25px;
@@ -378,8 +378,8 @@ ul {
 .knowledge li::before { content: "✧"; margin-right: 0.5em; }
 
 .degree{
-  background-color: #3f3b32;
-  border-left: 10px solid #3f3b32;
+  background-color: rgb(26, 24, 23);
+  border-left: 10px solid #292827;
   padding: 1em;
   margin: 1.5em 0em;
   border-radius: 8px 25px 8px 25px;
@@ -388,7 +388,7 @@ ul {
 }
 
 .certificates{
-  background-color: #3f3b32;
+  background-color: rgb(26, 24, 23);
   margin: 1.5em 0em;
   padding: 1em;
   border-radius: 25px 3px 25px 3px;
@@ -407,7 +407,7 @@ ul {
 }
 
 .contact-card{
-  background-color:  rgba(26, 24, 23, 0.87);
+  background-color:  rgb(26, 24, 23);
   color: #d3c8af;
   padding: 2em;
   border-radius: 35px;

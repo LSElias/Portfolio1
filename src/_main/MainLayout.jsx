@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import IconBxlReact from "../components/UI/ReactSVG";
 import IconBxlAngular from "../components/UI/AngularSVG";
@@ -7,10 +7,26 @@ import IconJs_badge from "../components/UI/JavaSciprtSVG";
 import IconHtml5 from "../components/UI/HTML";
 import { FaGithub } from "react-icons/fa";
 import { FaFileDownload } from "react-icons/fa";
+import Loader from "../components/shared/Loader/Loader";
 
 function MainLayout() {
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsPageLoaded(true);
+    };
+
+    window.addEventListener('load', handleLoad);
+
+    return () => {
+      window.removeEventListener('load', handleLoad);
+    };
+  }, []);
+
   return (
     <>
+    {isPageLoaded ? <Loader/> : 
       <div className="InsidePage">
         <div className="InsideBox">
           <div className="Title">
@@ -74,6 +90,7 @@ function MainLayout() {
           <IconHtml5 />
         </div>
       </div>
+      }
     </>
   );
 }

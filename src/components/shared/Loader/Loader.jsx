@@ -5,7 +5,7 @@ import './loader.css'
 const Loader = () => {
   return (
     <div className='loaderbg'>
-      <img src='public/loader.gif'/>
+      <img src='/loader.gif'/>
       </div>
   )
 }

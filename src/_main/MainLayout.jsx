@@ -10,23 +10,30 @@ import { FaFileDownload } from "react-icons/fa";
 import Loader from "../components/shared/Loader/Loader";
 
 function MainLayout() {
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
+  const [isPageLoaded, setIsPageLoaded] = useState(() => {
+    // Check local storage to see if it has been set
+    return sessionStorage.getItem('isPageLoaded') === 'true';
+  });
 
   useEffect(() => {
-    const handleLoad = () => {
+    const onContentLoaded = () => {
       setIsPageLoaded(true);
+      sessionStorage.setItem('isPageLoaded', 'true'); // Persist state
     };
 
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      onContentLoaded();
+    } else {
+      document.addEventListener('DOMContentLoaded', onContentLoaded);
+      return () => document.removeEventListener('DOMContentLoaded', onContentLoaded);
+    }
   }, []);
+
+
 
   return (
     <>
-    {isPageLoaded ? <Loader/> : 
+    {!isPageLoaded ? <Loader/> : 
       <div className="InsidePage">
         <div className="InsideBox">
           <div className="Title">

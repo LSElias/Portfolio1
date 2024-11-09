@@ -6,21 +6,23 @@ const GreenWallet = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setIsPageLoaded(true);
-    };
+    const onContentLoaded = () => setIsPageLoaded(true);
 
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+      onContentLoaded();
+    } else {
+      document.addEventListener('DOMContentLoaded', onContentLoaded);
+      
+      return () => {
+        document.removeEventListener('DOMContentLoaded', onContentLoaded);
+      };
+    }
   }, []);
 
 
   return (
     <>
-      {isPageLoaded ? (
+      {!isPageLoaded ? (
         <Loader />
       ) : (
         <div className="m-0 propage gw">

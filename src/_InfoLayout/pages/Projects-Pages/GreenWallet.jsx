@@ -6,20 +6,19 @@ const GreenWallet = () => {
   const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    const onContentLoaded = () => setIsPageLoaded(true);
-
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      onContentLoaded();
+    // Check if the document is already loaded
+    if (document.readyState === 'complete') {
+      setIsPageLoaded(true);
     } else {
-      document.addEventListener('DOMContentLoaded', onContentLoaded);
-      
+      // Add event listener if page is still loading
+      const handleLoad = () => setIsPageLoaded(true);
+      window.addEventListener('load', handleLoad);
+
       return () => {
-        document.removeEventListener('DOMContentLoaded', onContentLoaded);
+        window.removeEventListener('load', handleLoad);
       };
     }
   }, []);
-
-
   return (
     <>
       {!isPageLoaded ? (

@@ -10,26 +10,22 @@ import { FaFileDownload } from "react-icons/fa";
 import Loader from "../components/shared/Loader/Loader";
 
 function MainLayout() {
-  const [isPageLoaded, setIsPageLoaded] = useState(() => {
-    // Check local storage to see if it has been set
-    return sessionStorage.getItem('isPageLoaded') === 'true';
-  });
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
 
   useEffect(() => {
-    const onContentLoaded = () => {
+    // Check if the document is already loaded
+    if (document.readyState === 'complete') {
       setIsPageLoaded(true);
-      sessionStorage.setItem('isPageLoaded', 'true'); // Persist state
-    };
-
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      onContentLoaded();
     } else {
-      document.addEventListener('DOMContentLoaded', onContentLoaded);
-      return () => document.removeEventListener('DOMContentLoaded', onContentLoaded);
+      // Add event listener if page is still loading
+      const handleLoad = () => setIsPageLoaded(true);
+      window.addEventListener('load', handleLoad);
+
+      return () => {
+        window.removeEventListener('load', handleLoad);
+      };
     }
   }, []);
-
-
 
   return (
     <>
